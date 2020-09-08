@@ -14,6 +14,7 @@ ws.on('open', () => {
 
 ws.on('message', data => {
     console.log(data)
+    ws.send('dada')
 })
 
 ws.on('error', e => {
