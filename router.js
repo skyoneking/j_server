@@ -5,12 +5,11 @@ const koaBody = require('koa-body')({
 
 const api = new Router();
 const file = new Router();
-
-api.use('*', koaBody, async (ctx) => {
-    ctx.body = 'api...';
+api.use('/', koaBody, async (ctx) => {
+    ctx.body = 'server api...';
 });
-file.get('*', async (ctx) => {
-    ctx.body = 'file...';
+file.get('/', async (ctx) => {
+    ctx.body = 'server file...';
 });
 
 const router = new Router();
